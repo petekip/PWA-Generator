@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-EN" lang="en-EN" >
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>TODO PWA start page</title>
+
+<style>
+body, html { font-size:8vh; padding:1em; }
+</style>
+
+<link rel="manifest" href="manifest.json">
+
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+   .then(function() { console.log('Service Worker Registered'); });
+}
+</script>
+
+</head>
+
+<body>
+
+This is just a start page for your Progressive Web Application, to demonstrate PWAssist functionality.
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PWA-config>
+  <appName>TODO list PWA</appName>
+  <appId>myTODO</appId>
+  <appDesc>Just a test page for demonstrating PWAssist</appDesc>
+  <appShortName>TODO list</appShortName>
+  <ignoreFolders>res,_tempfiles</ignoreFolders>
+  <ignoreFiles>test*.htm,test*.html</ignoreFiles>
+  <cacheName>todo_cache</cacheName>
+  <dynamicPart>?getdata=,&amp;getdata=</dynamicPart>
+  <iconResolutions>48,96,144,256</iconResolutions>
+  <baseIcon>res/logo.png</baseIcon>
+  <iconFilenameTemplate>img/todopwa-{size}.png</iconFilenameTemplate>
+  <backgroundColor>#EEEEF8</backgroundColor>
+  <themeColor>#2244EE</themeColor>
+</PWA-config>

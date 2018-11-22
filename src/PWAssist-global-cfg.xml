@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PWA-config>
+  <author>My name</author>
+  <copyRight>my little big company</copyRight>
+  <ignoreFolders>res</ignoreFolders>
+  <ignoreFiles>test*.html,_temp*.*,*.log</ignoreFiles>
+  <fileSizeLimit>256K</fileSizeLimit>
+  <cacheName>myapp_cache</cacheName>
+  <dynamicPart>?refresh=</dynamicPart>
+  <lang>en-EN</lang>
+  <iconResolutions>44,128,152,256</iconResolutions>
+  <baseIcon>res/icon.png</baseIcon>
+  <iconFilenameTemplate>img/iconapp-{size}.png</iconFilenameTemplate>
+  <backgroundColor>#CCCCFF</backgroundColor>
+  <themeColor>#AACCFF</themeColor>
+  <swTemplates>
+    <swTemplate src="PWAssist-cacheFirst.js" title="Cache-First" />
+    <swTemplate src="PWAssist-networkFirst.js" title="Network-First" />
+  </swTemplates>
+</PWA-config>
