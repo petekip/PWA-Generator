@@ -19,7 +19,7 @@ in the current folder).
 
 ![area with buttons](docs/PWAssist-butts.png)
 
-![form for editing app params](docs/PWAssist-form.png)
+![form for editing app params](docs/PWAssist-form.jpg)
 
 Note that __SW Template File__ is a select box, because we have registered templates in the 
 global config file (described later).
