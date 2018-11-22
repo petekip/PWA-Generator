@@ -6,10 +6,10 @@ and generating icon set for all needed resolutions from a single image.
 ## Using
 
 Simplest way to start using PWAssist, is by following these steps:
-- in the root folder of your project create simple "make" php file like this (for example, pwamake.php):
+- in the root folder of your project create simple "make" php file like this (for example, pwagenerate.php):
 
 ```php
-// file : pwamake.php
+// file : pwagenerate.php
 include_once('../src/PWAssist.php');
 PWAssist::init();
 ```
@@ -25,9 +25,9 @@ Note that __SW Template File__ is a select box, because we have registered templ
 global config file (described later).
 
 - After performing "Save parameters" you will have "pwa_config.xml" with all desired configuration. Now you can press  any of "action" button (icons, Service worker file, manifest.json)
- or run pwamake.php from the shell:
+ or run pwagenerate.php from the shell:
 ```sh
-$ php pwamake.php {command} [{command} ...]
+$ php pwagenerate.php {command} [{command} ...]
 ```
 where {command} is one of icons, manifest, sw, all.
 - icons - creates icon files for all your registered sizes. These files will be listed in manifest.json as icons for different resolutions.
@@ -38,7 +38,7 @@ So calling "all" is equivalent to "icons manifest sw".
 
 ## Configuration XML file
 
-XML configuration file for your application has a name "pwa_config.xml" and placed in the "current" folder with your pwamake.php.
+XML configuration file for your application has a name "pwa_config.xml" and placed in the "current" folder with your pwagenerate.php.
 
 You can edit this file manuallty in text editor or enter all needed values in HTML form and press "Save parameters" button.
 Here is a supported parameters list.
@@ -47,7 +47,7 @@ Here is a supported parameters list.
 - __App Short Name__ (appShortName) - short application name (value for __short_name__ in manifest.json)
 - __App Description__ (appDesc) - application description (value for __description__ in manifest.json)
 - __Start URI__ (appDesc) - application description (value used as __start_url__ in manifest.json and as a first item in precache file list inside SW script)
-- __Home Folder__ : by default work performed on current folder, you started your pwamake.php from.
+- __Home Folder__ : by default work performed on current folder, you started your pwagenerate.php from.
 If you need to have another "document root" for your files, change default "./" to a right path (relative to current folder).
 - __App Version__ (appVersion) - application current version (will be used in cacheName in service worker,
 so after changing version newly generated SW script could force clearing from old cache and populate new one)
@@ -151,7 +151,7 @@ or even black color on the whole loaded picture). So be ready to get strange res
 
 ## Demo
 Working sample demonstrating "service page" with all buttons for creating PWA modules :
-[demo/pwamake.php](demo/pwamake.php)
+[pwagenerate.php](pwagenerate.php)
 
 ## License
 Distributed under MIT License :
